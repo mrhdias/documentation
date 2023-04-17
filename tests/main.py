@@ -19,8 +19,9 @@ CUSTOM_RST_DIRECTIVES = [
 def run_additional_checks(argv=None):
     _enabled_checkers, args = sphinxlint.parse_args(argv)
     for path in chain.from_iterable(sphinxlint.walk(path, args.ignore) for path in args.paths):
-        for checker in checkers.resource_files.additional_checkers:
-            checker(path)
+        if not path.endswith('.rst'):
+            for checker in checkers.resource_files.additional_checkers:
+                checker(path)
 
 """
 The following checkers are selected.
