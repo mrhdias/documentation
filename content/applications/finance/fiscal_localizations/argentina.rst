@@ -668,12 +668,211 @@ one tax group for the VAT and another for the perception. The perception default
    :alt: VAT perception.
 
 To edit the VAT perception and set the correct amount, you should use the :guilabel:`Pencil` icon
-that is the next to the :guilabel:`Perception` amount. After the VAT perception amount has been
-set, the invoice can then be validated.
+that is the next to the :guilabel:`Perception` amount. After the VAT perception amount has been set,
+the invoice can then be validated.
 
 .. image:: argentina/enter-perception-amount.png
    :align: center
    :alt: Enter the perception amount.
+
+Check management
+----------------
+
+To install the *Third Party and Deferred/Electronic Checks Management* module, go to
+:menuselection:`Apps` and search for the module by its technical name `l10n_latam_check` and click
+the :guilabel:`Install` button.
+
+.. image:: argentina/l10n-latam-check-module.png
+   :align: center
+   :alt: l10n_latam_check module.
+
+This module enables the required configuration for journals and payments to:
+
+- Create, manage and control your different types of checks
+- Optimize the management of *own checks* and *third party checks*
+- Have an easy and effective way to manage expiration dates from your own and third party checks
+
+Once all the configurations are made for the Argentinian electronic invoice flow, it is also needed
+to complete certain configurations for the own checks and the third party checks flows.
+
+Own checks
+~~~~~~~~~~
+
+In the case of own checks, the configuration needed is related to the bank that will use this kind
+of payment method.
+
+For the bank journals that will be used to create own checks, go to :menuselection:`Accounting -->
+Journals` where the next two configurations need to be made:
+
+- The bank journal should have an outgoing payment method of :guilabel:`Checks` active.
+- In the section of :guilabel:`Checks Management` the field :guilabel:`Uses Electronic or Deferred
+  Checks` should be activated.
+
+This last configuration will enable the ability to:
+
+- Enter check numbers manually.
+- Enable a field to allocate the payment date of the check.
+- Printing will be deactivated.
+
+.. image:: argentina/bank-journal-conf.png
+   :align: center
+   :alt: Bank journal configurations.
+
+Management of own checks
+************************
+
+Own checks can be created directly from the vendor bill. For this process, click on the
+:guilabel:`Register Payment` button. This will show the pop-up menu to register any kind of payment.
+
+.. image:: argentina/register-pay-vendorbill.png
+   :align: center
+   :alt: Register Payment button on a vendor bill.
+
+In this window, it is necessary to select the bank journal from which the payment will be made and
+the :guilabel:`Payment Method` should be `Checks`. Also, it is necessary to add the :guilabel:`Check
+Number`, the :guilabel:`Check Payment Date` and the amount to pay.
+
+.. image:: argentina/payment-popup-vendorbill.png
+   :align: center
+   :alt: Payment pop-up window with own check options enabled.
+
+.. note::
+   To manage current checks, the :guilabel:`Check Payment Date` should be left blank or filled with
+   the actual date. To manage deferred checks, the :guilabel:`Check Payment Date` should be in the
+   future.
+
+To manage your already existing own checks, navigate to :menuselection:`Accounting --> Vendors -->
+Own Checks`. This window shows critical information such as the dates when checks need to be paid,
+total quantity of checks, the total amount paid in checks, which will lead to better financial
+planning.
+
+.. image:: argentina/checks-menu-vendorbill.png
+   :align: center
+   :alt: Own checks menu location.
+
+Also, it is important to note that the list is pre-filtered by checks that are still not reconciled
+with a bank statement - that were not yet debited from the bank - which can be noted by the
+:guilabel:`Is Matched with a Bank Statement` field. If you want to see all of your own checks, you
+can delete the :guilabel:`No Bank Matching` filter manually by clicking on the :guilabel:`X` symbol.
+
+.. image:: argentina/check-menu-list-vendorbill.png
+   :align: center
+   :alt: Own checks menu organization and filtering.
+
+Cancel an own check
+*******************
+
+To cancel an own check created in Odoo, navigate to :menuselection:`Accounting --> Vendors --> Own
+Checks` and select the check to be canceled, then click on the :guilabel:`Empty Check` button.
+
+.. image:: argentina/empty-check-button.png
+   :align: center
+   :alt: Empty Check button to cancel Own Checks
+
+This will break the conciliation with the vendor bills and the bank statements and leave the check
+in a canceled state.
+
+Third party checks
+~~~~~~~~~~~~~~~~~~
+
+To manage third party checks in Odoo, navigate to :menuselection:`Accounting application --> Clients
+--> Third Party Checks`.
+
+.. image:: argentina/checks-menu-customerinvoice.png
+   :align: center
+   :alt: Third party checks menu.
+
+Third party checks need specific journals to be used as a customer payment method, in order to
+register the payments using this type of checks. The journals needed are:
+
+- :guilabel:`Third Party Checks` journal
+- :guilabel:`Rejected Third Party Checks` journal
+
+.. image:: argentina/third-party-checks-journals.png
+   :align: center
+   :alt: Journals for Third Party checks.
+
+You can manually create more journals if there is the need to use it in more points of sale.
+
+The :guilabel:`Third Party Checks` journal needs to be configured with a new account,
+:guilabel:`Cash Account`, created specifically for the new journals.
+
+.. image:: argentina/auto-cash-account.png
+   :align: center
+   :alt: Automatically created cash account.
+
+The available payment methods are listed on the :guilabel:`Payment Methods` tab:
+
+- :guilabel:`New Third Party Check`: For incoming payments, this method will be used to create new
+  third party checks.
+- :guilabel:`Existing Third Party Check`: For incoming and outgoing payments, this method will be
+  used to receive or pay a vendor bills using already existing checks, as well as for internal
+  transfers.
+
+.. image:: argentina/auto-payment-methods.png
+   :align: center
+   :alt: Payment methods automatically created.
+
+The :guilabel:`Rejected Third Party Checks` journal also needs to be configured. This journal is
+used to manage rejected third party checks. It can be utilized to send checks rejected at the moment
+of collection or when coming from vendors when rejected.
+
+The journal is configured with its own cash account (named :guilabel:`Rejected Third Party Check`)
+and the payment methods mentioned above.
+
+New third party checks
+**********************
+
+When on a customer invoice, click on the :guilabel:`Register Payment` button. This will show the
+pop-up menu to register any kind of payment.
+
+.. image:: argentina/register-peyment-customerinvoice.png
+   :align: center
+   :alt: Register Payment button on a customer invoice.
+
+In this window, it is necessary to select the :guilabel:`Third Party Checks` journal from which the
+payment will be made.
+
+When selecting the :guilabel:`New Third Party Checks` method, the fields required to create a new
+check will be presented. With these fields you can determine the :guilabel:`Check Number`, the
+:guilabel:`Payment Date` and the :guilabel:`Check Bank`.
+
+Also, you can manually add the :guilabel:`Check Issuer CUIT`, but regularly this will be auto-filled
+by the client's CUIT related to the invoice.
+
+.. image:: argentina/third-party-payment-popup.png
+   :align: center
+   :alt: Payment pop-up window with New Third Party Check options enabled.
+
+Existing third party checks
+***************************
+
+To pay a vendor bill with an existing check it's necessary to select the :guilabel:`Existing Third
+Party Checks` method, this will show the required :guilabel:`Check` field, which will display the
+available existing checks to be used as a payment for the Vendor Bill.
+
+.. image:: argentina/existing-third-party-popup.png
+   :align: center
+   :alt: Payment pop-up window with Existing Third Party Check options enabled.
+
+When the :guilabel:`Existing Third Party Check` is used, it is also possible to review which
+operations are related to it, with the :guilabel:`Check Operations` button. Clicking this button
+will display a list of the actions that have been performed with this check. For example, a third
+party check created to pay a customer invoice and later used as an existing third party check to pay
+a vendor bill.
+
+.. image:: argentina/check-operations-menulist.png
+   :align: center
+   :alt: Check Operations menu.
+
+When having multiple operations for the check, the menu will show multiple records.
+
+The menu also presents critical information related to these operations like:
+
+- The type of payment, to classify if the operation was either a payment sent to a vendor or a
+  payment received from the customer
+- The journal in which the check is currently being managed
+- The partner associated with the operation, either a client or vendor
 
 Reports
 =======
