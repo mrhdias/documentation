@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>Payment terms and installment plans</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="payment-terms-and-installment-plans">
+<h1 class="title">Payment terms and installment plans</h1>
+
+<p><strong>Payment terms</strong> specify all the conditions of a sale's payment to help ensure customers pay their
+invoices correctly and on time.</p>
+<p>Payment terms are generally defined on documents such as sales orders, customer invoices, and
+vendor bills. Payment terms cover:</p>
+<ul class="simple">
+<li>The due date(s)</li>
+<li>Early payment discounts</li>
+<li>Any other conditions on the payment</li>
+</ul>
+<p>An <strong>installment plan</strong> allows the customers to pay an invoice in parts, with the amounts and
+payment dates defined beforehand by the seller.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 18)</p>
+<p>Unknown directive type &quot;example&quot;.</p>
+<pre class="literal-block">
+.. example::
+   - | **Immediate Payment**
+     | The full payment is due on the day of the invoice's issuance.
+   - | **15 Days** (or **Net 15**)
+     | The full payment is due 15 days after the invoice date.
+   - | **21 MFI**
+     | The full payment is due by the 21st of the month following the invoice date.
+   - | **30% Advance End of Following Month**
+     | 30% is due on the day of the invoice's issuance. The remaining balance is due at the end of
+       the following month.
+   - | **2% 10, Net 30 EOM**
+     | A 2% :doc:`cash discount &lt;cash_discounts&gt;` if the payment is received within ten days.
+       Otherwise, the full payment is due at the end of the month following the invoice date.
+
+</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last">
+<li><p class="first">Payment terms are not to be confused with <a href="#id1"><span class="problematic" id="id2">:doc:`down payment invoices
+&lt;/applications/sales/sales/invoicing/down_payment&gt;`</span></a>. If, for a specific order, you issue
+multiple invoices to your customer, that is neither a payment term nor an installment plan but
+an invoicing policy.</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 33); <em><a href="#id2">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;doc&quot;.</p>
+</div>
+</li>
+<li><p class="first">This page is about the <em>payment terms</em> feature, not <a href="#id3"><span class="problematic" id="id4">:doc:`terms &amp; conditions
+&lt;terms_conditions&gt;`</span></a>, which can be used to declare contractual obligations regarding content
+use, return policies, and other policies surrounding the sale of goods and services.</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 37); <em><a href="#id4">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;doc&quot;.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 41)</p>
+<p>Unknown directive type &quot;seealso&quot;.</p>
+<pre class="literal-block">
+.. seealso::
+   - `Odoo tutorials: payment terms &lt;https://www.odoo.com/slides/slide/payment-terms-1679&gt;`_
+   - :doc:`cash_discounts`
+
+</pre>
+</div>
+<div class="section" id="configuration">
+<h1>Configuration</h1>
+<p>To create new payment terms, follow these steps:</p>
+<ol class="arabic">
+<li><p class="first">Go to <a href="#id5"><span class="problematic" id="id6">:menuselection:`Accounting --&gt; Configuration --&gt; Payment Terms`</span></a> and click on
+<a href="#id7"><span class="problematic" id="id8">:guilabel:`New`</span></a>.</p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 50); <em><a href="#id6">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;menuselection&quot;.</p>
+</div>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 50); <em><a href="#id8">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+</li>
+<li><p class="first">Enter a name in the <a href="#id9"><span class="problematic" id="id10">:guilabel:`Payment Terms`</span></a> field. This field is the name displayed in the
+database and is not customer-facing.</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 52); <em><a href="#id10">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+</li>
+<li><p class="first">Enter the text to be displayed on the document (sales order, invoice, etc.) on the
+<a href="#id11"><span class="problematic" id="id12">:guilabel:`Description on the Invoice`</span></a> field.</p>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 54); <em><a href="#id12">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+</li>
+<li><p class="first">Tick the <a href="#id13"><span class="problematic" id="id14">:guilabel:`Display terms on invoice`</span></a> checkbox to display a breakdown of each payment and
+its due date on the invoice report, if desired.</p>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 56); <em><a href="#id14">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">In the <a href="#id15"><span class="problematic" id="id16">:guilabel:`Terms`</span></a> section, add a set of rules (terms) to define what needs to be paid
+and by which due date(s). Defining terms automatically calculates the payments' due date(s).
+This is particularly helpful for managing <strong>installment plans</strong> (payment terms with multiple
+terms).</div>
+<div class="line">To add a term, click on <a href="#id17"><span class="problematic" id="id18">:guilabel:`Add a line`</span></a>, and define its <a href="#id19"><span class="problematic" id="id20">:guilabel:`Due Type`</span></a>,
+<a href="#id21"><span class="problematic" id="id22">:guilabel:`Value`</span></a>, and fill out the appropriate fields to define when the term is due,
+including any <a href="#id23"><span class="problematic" id="id24">:doc:`discounts &lt;cash_discounts&gt;`</span></a>. Due dates are calculated by taking the
+invoice/bill date, first adding the <a href="#id25"><span class="problematic" id="id26">:guilabel:`Months`</span></a>, and then adding the <a href="#id27"><span class="problematic" id="id28">:guilabel:`Days`</span></a>.
+If the <a href="#id29"><span class="problematic" id="id30">:guilabel:`End of month`</span></a> toggle is enabled, the due date will then be the end of that
+month, plus any <a href="#id31"><span class="problematic" id="id32">:guilabel:`Days after End of month`</span></a>.</div>
+</div>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 58); <em><a href="#id16">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id17">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id18">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id19">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id20">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id21">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id22">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id23">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id24">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;doc&quot;.</p>
+</div>
+<div class="system-message" id="id25">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id26">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id27">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id28">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id29">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id30">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+<div class="system-message" id="id31">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 62); <em><a href="#id32">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;guilabel&quot;.</p>
+</div>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>To instead specify a number of days before the end of the month, use a negative value in the
+<a href="#id33"><span class="problematic" id="id34">:guilabel:`Days after End of month`</span></a> field.</p>
+<div class="last system-message" id="id33">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 70); <em><a href="#id34">backlink</a></em></p>
+Unknown interpreted text role &quot;guilabel&quot;.</div>
+</div>
+<p>Enter an invoice amount and invoice date in the <a href="#id35"><span class="problematic" id="id36">:guilabel:`Example`</span></a> section to generate the payments
+that would be due using these payment terms and verify that the payment terms are set up correctly.</p>
+<div class="system-message" id="id35">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 73); <em><a href="#id36">backlink</a></em></p>
+Unknown interpreted text role &quot;guilabel&quot;.</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<ul class="last simple">
+<li>Terms are computed in the order of their due dates.</li>
+<li>The <strong>balance</strong> should always be used for the last line.</li>
+</ul>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 80)</p>
+<p>Unknown directive type &quot;example&quot;.</p>
+<pre class="literal-block">
+.. example::
+   In the following example, 30% is due on the day of issuance, and the balance is due at the end of
+   the following month.
+
+   .. image:: payment_terms/configuration.png
+      :alt: Example of Payment Terms. The last line is the balance due on the 31st of the following
+            month.
+
+</pre>
+</div>
+</div>
+<div class="section" id="using-payment-terms">
+<h1>Using payment terms</h1>
+<p>Payment terms can be defined with the <a href="#id37"><span class="problematic" id="id38">:guilabel:`Payment Terms`</span></a> field on:</p>
+<div class="system-message" id="id37">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 91); <em><a href="#id38">backlink</a></em></p>
+Unknown interpreted text role &quot;guilabel&quot;.</div>
+<ul>
+<li><div class="first line-block">
+<div class="line"><strong>Contacts</strong></div>
+<div class="line">To automatically set default payment terms on a contact's new sales orders, invoices, and bills.
+This can be modified in the contact’s <em>Form View</em>, under the <em>Sales &amp; Purchase</em> tab.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Quotations/Sales Orders</strong></div>
+<div class="line">To set specific payment terms automatically on all invoices generated from a quotation or sales
+order.</div>
+</div>
+</li>
+</ul>
+<p>Payment terms can be defined in the <a href="#id39"><span class="problematic" id="id40">:guilabel:`Due Date`</span></a> field, with the <a href="#id41"><span class="problematic" id="id42">:guilabel:`Terms`</span></a> drop-down
+list on:</p>
+<div class="system-message" id="id39">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 100); <em><a href="#id40">backlink</a></em></p>
+Unknown interpreted text role &quot;guilabel&quot;.</div>
+<div class="system-message" id="id41">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 100); <em><a href="#id42">backlink</a></em></p>
+Unknown interpreted text role &quot;guilabel&quot;.</div>
+<ul>
+<li><div class="first line-block">
+<div class="line"><strong>Customer invoices</strong></div>
+<div class="line">To set specific payment terms on an invoice.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Vendor bills</strong></div>
+<div class="line">To set specific payment terms on a bill.</div>
+</div>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Setting payment terms on a vendor bill is mostly useful for managing vendor terms with multiple
+installments or cash discounts. Otherwise, manually setting the <strong>due date</strong> is enough. If
+payment terms are already defined, empty the field to select a date.</p>
+</div>
+</div>
+<div class="section" id="journal-entries">
+<h1>Journal entries</h1>
+<p>Invoices with specific payment terms generate different <em>journal entries</em>, with one <em>journal item</em>
+for every computed <em>due date</em>.</p>
+<p>This makes for easier <em>follow-ups</em> and <em>reconciliation</em> since Odoo takes each due date into account,
+rather than just the balance due date. It also helps to get an accurate <em>aged receivable report</em>.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/odoo/odoo/documentation/content/applications/finance/accounting/customer_invoices/payment_terms.rst</tt>, line 122)</p>
+<p>Unknown directive type &quot;example&quot;.</p>
+<pre class="literal-block">
+.. example::
+   .. image:: payment_terms/journal-entry.png
+      :alt: The amount debited to the account receivable is split into two journal items with
+            distinct due dates
+
+   In this example, an invoice of $1000 has been issued with the following payment terms: *30% is
+   due on the day of issuance, and the balance is due at the end of the following month.*
+
+   +----------------------+-------------+---------+---------+
+   | Account              | Due date    | Debit   | Credit  |
+   +======================+=============+=========+=========+
+   | Account Receivable   | February 21 | 300     |         |
+   +----------------------+-------------+---------+---------+
+   | Account Receivable   | March 31    | 700     |         |
+   +----------------------+-------------+---------+---------+
+   | Product Sales        |             |         | 1000    |
+   +----------------------+-------------+---------+---------+
+
+   The $1000 debited to the account receivable is split into two distinct journal items. Both of
+   them have their own due date.
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
